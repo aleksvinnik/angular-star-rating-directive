@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+rating {
+    display: flex;
+    span{ 
+        position: relative;
+        font-size: 30px;
+    }
+    span::after{
+        content:attr(data-fullicon);
+        position: absolute;
+        z-index: 1;
+        color: #e41172;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    span.w100:after{
+        right: 0;
+    }
+    span.w90:after{
+        right: 10%;
+    }
+    span.w80:after{
+        right: 20%;
+    }
+    span.w70:after{
+        right: 30%;
+    }
+    span.w60:after{
+        right: 40%;
+    }
+    span.w50:after{
+        right: 50%;
+    }
+    span.w40:after{
+        right: 60%;
+    }
+    span.w30:after{
+        right: 70%;
+    }
+    span.w20:after{
+        right: 80%;
+    }
+    span.w10:after{
+        right: 90%;
+    }
+    span.w0:after{
+        right: 100%;
+    }
+}
