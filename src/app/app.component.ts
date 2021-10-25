@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'rating';
+  title :string = 'rating';
   rating: number=0;
-  constructor(){
-    
-  }
+  constructor(){}
   getRating(rating:number){
     this.rating=rating;
   }
