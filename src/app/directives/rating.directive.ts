@@ -9,13 +9,14 @@ export class RatingDirective implements OnInit {
   @Input('readonly') readonly:string="true";
   @Input("rating") rating:any=0;
   @Output("changeRating") changeRating  =  new EventEmitter<number>();
-  htmlel:any;
-  starel:any;
+  htmlel:HTMLElement;
+  starel:HTMLElement;
   star =new Array(5);
   rounded:number=0;
   persent: number=0;
   constructor(private el: ElementRef) {
      this.htmlel  = this.el.nativeElement as HTMLElement;
+     this.starel=document.createElement("span")  as HTMLElement;
   }
   defaultRating(){
     this.rounded=Math.floor(this.rating);
@@ -28,7 +29,7 @@ export class RatingDirective implements OnInit {
   }
   createRating(){
    
-    this.starel=document.createElement("span")  as HTMLElement;
+    
     this.starel.textContent=this.emptyIcon;
     this.starel.setAttribute("data-fullicon",this.fullIcon);
     for (let i = 0; i < this.star.length; i++) {
